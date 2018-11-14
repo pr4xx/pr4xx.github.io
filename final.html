@@ -26,136 +26,132 @@
 	outline: 0;
 }
 .image-checkbox input[type="checkbox"] {
-	display: none;
+	/*display: none;*/
 }
 
 .image-checkbox-checked {
 	border-color: #4783B0;
 }
 .image-checkbox .fa {
-  position: absolute;
-  color: #4A79A3;
-  background-color: #fff;
-  padding: 10px;
-  top: 0;
-  right: 0;
+
 }
 .image-checkbox-checked .fa {
-  display: block !important;
+  display: none;
 }
     </style>
   </head>
   <body>
-    <div class="container">
+    <form id="form">
+    <div class="container" style="padding-top: 30px;">
       <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
         <label class="image-checkbox">
           <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-          <input type="checkbox" name="image[]" value="1" />
+          <input type="checkbox" name="image[]" value="correct" />
           <i class="fa fa-check hidden"></i>
         </label>
       </div>
       <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
         <label class="image-checkbox">
           <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-          <input type="checkbox" name="image[]" value="2" />
+          <input type="checkbox" name="image[]" value="wrong" />
           <i class="fa fa-check hidden"></i>
         </label>
       </div>
       <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
         <label class="image-checkbox">
           <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-          <input type="checkbox" name="image[]" value="3" />
+          <input type="checkbox" name="image[]" value="correct" />
           <i class="fa fa-check hidden"></i>
         </label>
       </div>
       <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
         <label class="image-checkbox">
           <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-          <input type="checkbox" name="image[]" value="4" />
+          <input type="checkbox" name="image[]" value="wrong" />
           <i class="fa fa-check hidden"></i>
         </label>
       </div>
       <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
           <label class="image-checkbox">
             <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-            <input type="checkbox" name="image[]" value="5" />
+            <input type="checkbox" name="image[]" value="wrong" />
             <i class="fa fa-check hidden"></i>
           </label>
         </div>
         <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
             <label class="image-checkbox">
               <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-              <input type="checkbox" name="image[]" value="5" />
+              <input type="checkbox" name="image[]" value="wrong" />
               <i class="fa fa-check hidden"></i>
             </label>
           </div>
           <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
               <label class="image-checkbox">
                 <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                <input type="checkbox" name="image[]" value="5" />
+                <input type="checkbox" name="image[]" value="wrong" />
                 <i class="fa fa-check hidden"></i>
               </label>
             </div>
             <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
                 <label class="image-checkbox">
                   <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                  <input type="checkbox" name="image[]" value="5" />
+                  <input type="checkbox" name="image[]" value="wrong" />
                   <i class="fa fa-check hidden"></i>
                 </label>
               </div>
               <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
                   <label class="image-checkbox">
                     <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                    <input type="checkbox" name="image[]" value="5" />
+                    <input type="checkbox" name="image[]" value="wrong" />
                     <i class="fa fa-check hidden"></i>
                   </label>
                 </div>
                 <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
                     <label class="image-checkbox">
                       <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                      <input type="checkbox" name="image[]" value="5" />
+                      <input type="checkbox" name="image[]" value="wrong" />
                       <i class="fa fa-check hidden"></i>
                     </label>
                   </div>
                   <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
                       <label class="image-checkbox">
                         <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                        <input type="checkbox" name="image[]" value="5" />
+                        <input type="checkbox" name="image[]" value="wrong" />
                         <i class="fa fa-check hidden"></i>
                       </label>
                     </div>
                     <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
                         <label class="image-checkbox">
                           <img class="img-responsive" src="https://dummyimage.com/600x400/000/fff" />
-                          <input type="checkbox" name="image[]" value="5" />
+                          <input type="checkbox" name="image[]" value="wrong" />
                           <i class="fa fa-check hidden"></i>
                         </label>
                       </div>
     
     </div>
+  </form>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript">
-    // image gallery
-// init the state from the input
-$(".image-checkbox").each(function () {
-  if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
-    $(this).addClass('image-checkbox-checked');
+
+function check() {
+  var wrong = $("input[value='wrong']:checkbox:checked").length;
+  var correct = $("input[value='correct']:checkbox:checked").length;
+  console.log(wrong, correct);
+  if(wrong === 0 && correct === 2) {
+    alert("ya");
   }
-  else {
-    $(this).removeClass('image-checkbox-checked');
-  }
-});
+}
 
 // sync the state to the input
 $(".image-checkbox").on("click", function (e) {
   $(this).toggleClass('image-checkbox-checked');
   var $checkbox = $(this).find('input[type="checkbox"]');
   $checkbox.prop("checked",!$checkbox.prop("checked"))
-
+  check();
   e.preventDefault();
 });
     </script>
