@@ -10,6 +10,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" crossorigin="anonymous">
     <style>
         .nopad {
             padding-left: 0 !important;
@@ -141,14 +142,18 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/js/bootstrap-dialog.min.js"></script>
 <script type="text/javascript">
 
     function check() {
         var wrong = $("input[value='wrong']:checkbox:checked").length;
         var correct = $("input[value='correct']:checkbox:checked").length;
-        console.log(wrong, correct);
+        var solution = atob("aHR0cHM6Ly9pcy5nZC9yVnV1NXE=");
         if (wrong === 0 && correct === 3) {
-            alert(atob("NzEwMg=="));
+            BootstrapDialog.show({
+            title: 'You did it!',
+            message: '<a href="'+solution+'">'+solution+'</a>'
+        });
         }
     }
 
