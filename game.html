@@ -1,1 +1,84 @@
-Game
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Gametime!</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-dialog/1.34.7/css/bootstrap-dialog.min.css" crossorigin="anonymous">
+          <link rel="stylesheet" href="http://www.2meter3.de/jqPuzzle/jquery.jqpuzzle.css" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div style="padding: 30px;">
+        <h3>Solve me :) (Click tiles)</h3>
+        <img src="https://i.imgur.com/NLoURM1.jpg">
+    </div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://www.2meter3.de/jqPuzzle/jquery.js"></script>
+<script src="http://www.2meter3.de/jqPuzzle/jquery.jqpuzzle.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() { 
+        $('img').jqPuzzle({ 
+    rows: 3,                    // number of rows [3 ... 9] 
+    cols: 3,                    // number of columns [3 ... 9] 
+    hole: 1,                   // initial hole position [1 ... rows*columns] 
+    shuffle: true,             // initially show shuffled pieces [true|false] 
+    numbers: true,              // initially show numbers on pieces [true|false] 
+    language: 'en',             // language for gui elements [language code] 
+ 
+    // display additional gui controls 
+    control: { 
+        shufflePieces: false,    // display 'Shuffle' button [true|false] 
+        confirmShuffle: false,   // ask before shuffling [true|false] 
+        toggleOriginal: true,   // display 'Original' button [true|false] 
+        toggleNumbers: false,    // display 'Numbers' button [true|false] 
+        counter: false,          // display moves counter [true|false] 
+        timer: false,            // display timer (seconds) [true|false] 
+        pauseTimer: false        // pause timer if 'Original' button is activated 
+                                // [true|false] 
+    }, 
+ 
+    // perform actions when the puzzle is solved sucessfully 
+    success: { 
+        fadeOriginal: true,    // cross-fade original image [true|false] 
+        callback: function() {
+            alert("You did it! A is over. N = 1337.");
+        },    // callback a user-defined function [function] 
+                                // the function is passed an object as its argument 
+                                // which includes the fields 'moves' and 'seconds' 
+        callbackTimeout: 1    // time in ms after which the callback is called 
+    }, 
+ 
+    // animation speeds and settings 
+    animation: { 
+        shuffleRounds: 2,       // number of shuffle rounds [1 ... ] 
+        shuffleSpeed: 300,      // time in ms to perform a shuffle round 
+        slidingSpeed: 100,      // time in ms for a single move 
+        fadeOriginalSpeed: 300  // time in ms to cross-fade original image 
+    }, 
+ 
+    // additional style information not specified via css 
+    style: { 
+        gridSize: 2,            // space between two pieces in px 
+        overlap: true,          // if true, adjacent piece borders will overlap 
+                                // applies only if gridSize is set to 0 
+        backgroundOpacity: 0  // opacity of the original image behind the pieces 
+                                // [0 ... 1] (0 means no display) 
+    } 
+} 
+
+); // apply to all images 
+    }); 
+
+    
+</script>
+</body>
+</html>
