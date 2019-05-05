@@ -1,1 +1,290 @@
-Check back soon :)
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Aniiiija</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      Check back s
+      <input
+        type="text"
+        style="font-family: 'Times New Roman'; font-size: 16px; border: none; margin:0; padding:0;"
+        v-model="soon"
+        v-bind:style="{width: l()}"
+      />
+      n :)
+      <div
+        v-if="numO() > 2"
+        v-bind:style="{'font-size': 16 + ((numO()-3) * 3) + 'px'}"
+      >
+        <span v-if="numO() > 14">THINK</span>
+        <i class="far fa-calendar-alt"></i>
+        <span v-if="numO() > 18">BIG</span>
+      </div>
+      <div v-show="numO() > 5">
+        <input type="text" v-model="big" />
+      </div>
+      <div v-show="b()">
+        <div
+          style="display: flex; flex-direction: row; text-align: center; width: 600px;"
+        >
+          <div style="flex: 1;" v-for="(char, index) in dem">
+            <div
+              style="font-size: 24px; margin-bottom: 20px; margin-top: 20px;"
+              v-text="char"
+            ></div>
+            <div>
+              <button type="button" v-on:click="shift(index, -1)">
+                <i class="fas fa-arrow-alt-circle-left"></i>
+              </button>
+              <button type="button" v-on:click="shift(index, 1)">
+                <i class="fas fa-arrow-alt-circle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div v-if="d()" style="color: green; font-size: 60px; padding: 20px;">
+        <i class="far fa-check-square"></i>
+        <i class="far fa-smile"></i>
+      </div>
+    </div>
+
+    <script>
+      var _0x5924 = [
+        "XMKXw7l5EsKM",
+        "G8K7ew==",
+        "w71bwrQ=",
+        "HMKywqHDgXHCjsOQfCDCjQg=",
+        "D8KseVzCicOuKDxX",
+        "csOOwqnCvMK2Kw==",
+        "wrzCisODTMO1",
+        "I8OiH8OIYQ==",
+        "wqHCosKO",
+        "KMK4RiI=",
+        "w7HDj1IUwrAsw65ewp/DkcKU",
+        "I8OhGcOF",
+        "CsKPdcKABMK+",
+        "XsKKwrXClg==",
+        "wpFHB8Ovw5zDrw==",
+        "GcKFP8KZ",
+        "OFnCucKbw7NE",
+        "BcKCesKVMcKi",
+        "wr/Dk8O3",
+        "w6DDhWsBwqwtwrJwwprDh8KY",
+        "C8KzwrbDgHPChQ==",
+        "TMOsXg==",
+        "w6rCr1hAcMOL",
+        "w44EwrjDmgMA",
+        "M8OmF8OZRWU=",
+        "w7XCulpOZ8OG"
+      ];
+      (function(_0x5a527e, _0x1817cf) {
+        var _0x123df3 = function(_0x562d2d) {
+          while (--_0x562d2d) {
+            _0x5a527e["push"](_0x5a527e["shift"]());
+          }
+        };
+        _0x123df3(++_0x1817cf);
+      })(_0x5924, 0x1f2);
+      var _0x3544 = function(_0x266360, _0x3a8413) {
+        _0x266360 = _0x266360 - 0x0;
+        var _0x47523a = _0x5924[_0x266360];
+        if (_0x3544["Carfav"] === undefined) {
+          (function() {
+            var _0x306cf5;
+            try {
+              var _0x212b1e = Function(
+                "return\x20(function()\x20" +
+                  "{}.constructor(\x22return\x20this\x22)(\x20)" +
+                  ");"
+              );
+              _0x306cf5 = _0x212b1e();
+            } catch (_0x595e12) {
+              _0x306cf5 = window;
+            }
+            var _0x16e593 =
+              "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+            _0x306cf5["atob"] ||
+              (_0x306cf5["atob"] = function(_0x30b61f) {
+                var _0x26d54b = String(_0x30b61f)["replace"](/=+$/, "");
+                for (
+                  var _0x454683 = 0x0,
+                    _0x119812,
+                    _0x593cbd,
+                    _0x15dbd6 = 0x0,
+                    _0x4f7fe8 = "";
+                  (_0x593cbd = _0x26d54b["charAt"](_0x15dbd6++));
+                  ~_0x593cbd &&
+                  ((_0x119812 =
+                    _0x454683 % 0x4 ? _0x119812 * 0x40 + _0x593cbd : _0x593cbd),
+                  _0x454683++ % 0x4)
+                    ? (_0x4f7fe8 += String["fromCharCode"](
+                        0xff & (_0x119812 >> ((-0x2 * _0x454683) & 0x6))
+                      ))
+                    : 0x0
+                ) {
+                  _0x593cbd = _0x16e593["indexOf"](_0x593cbd);
+                }
+                return _0x4f7fe8;
+              });
+          })();
+          var _0x90a028 = function(_0x41d56a, _0x3a8413) {
+            var _0x5bc635 = [],
+              _0x5cd991 = 0x0,
+              _0x3737c3,
+              _0xeb8d0b = "",
+              _0xc48873 = "";
+            _0x41d56a = atob(_0x41d56a);
+            for (
+              var _0xd562ba = 0x0, _0x2603ea = _0x41d56a["length"];
+              _0xd562ba < _0x2603ea;
+              _0xd562ba++
+            ) {
+              _0xc48873 +=
+                "%" +
+                ("00" + _0x41d56a["charCodeAt"](_0xd562ba)["toString"](0x10))[
+                  "slice"
+                ](-0x2);
+            }
+            _0x41d56a = decodeURIComponent(_0xc48873);
+            for (var _0xf9f44d = 0x0; _0xf9f44d < 0x100; _0xf9f44d++) {
+              _0x5bc635[_0xf9f44d] = _0xf9f44d;
+            }
+            for (_0xf9f44d = 0x0; _0xf9f44d < 0x100; _0xf9f44d++) {
+              _0x5cd991 =
+                (_0x5cd991 +
+                  _0x5bc635[_0xf9f44d] +
+                  _0x3a8413["charCodeAt"](_0xf9f44d % _0x3a8413["length"])) %
+                0x100;
+              _0x3737c3 = _0x5bc635[_0xf9f44d];
+              _0x5bc635[_0xf9f44d] = _0x5bc635[_0x5cd991];
+              _0x5bc635[_0x5cd991] = _0x3737c3;
+            }
+            _0xf9f44d = 0x0;
+            _0x5cd991 = 0x0;
+            for (
+              var _0x1992a3 = 0x0;
+              _0x1992a3 < _0x41d56a["length"];
+              _0x1992a3++
+            ) {
+              _0xf9f44d = (_0xf9f44d + 0x1) % 0x100;
+              _0x5cd991 = (_0x5cd991 + _0x5bc635[_0xf9f44d]) % 0x100;
+              _0x3737c3 = _0x5bc635[_0xf9f44d];
+              _0x5bc635[_0xf9f44d] = _0x5bc635[_0x5cd991];
+              _0x5bc635[_0x5cd991] = _0x3737c3;
+              _0xeb8d0b += String["fromCharCode"](
+                _0x41d56a["charCodeAt"](_0x1992a3) ^
+                  _0x5bc635[
+                    (_0x5bc635[_0xf9f44d] + _0x5bc635[_0x5cd991]) % 0x100
+                  ]
+              );
+            }
+            return _0xeb8d0b;
+          };
+          _0x3544["jvOJYZ"] = _0x90a028;
+          _0x3544["kjMunU"] = {};
+          _0x3544["Carfav"] = !![];
+        }
+        var _0x3d62f9 = _0x3544["kjMunU"][_0x266360];
+        if (_0x3d62f9 === undefined) {
+          if (_0x3544["vbuLuY"] === undefined) {
+            _0x3544["vbuLuY"] = !![];
+          }
+          _0x47523a = _0x3544["jvOJYZ"](_0x47523a, _0x3a8413);
+          _0x3544["kjMunU"][_0x266360] = _0x47523a;
+        } else {
+          _0x47523a = _0x3d62f9;
+        }
+        return _0x47523a;
+      };
+      String[_0x3544("0x0", "uRXG")][_0x3544("0x1", "ELW]")] = function(
+        _0x4b342c,
+        _0x1865ab,
+        _0x49d2f6
+      ) {
+        return (
+          this[_0x3544("0x2", "R8O6")](0x0, _0x4b342c) +
+          _0x49d2f6 +
+          this[_0x3544("0x3", "n7##")](
+            _0x4b342c + Math[_0x3544("0x4", "Yx9A")](_0x1865ab)
+          )
+        );
+      };
+      new Vue({
+        el: _0x3544("0x5", "k^JW"),
+        data: { soon: "oo", big: "", dem: _0x3544("0x6", "FQW8") },
+        methods: {
+          l: function() {
+            var _0x4f9541 =
+              0xf +
+              (this[_0x3544("0x7", "n7##")][_0x3544("0x8", "ewf*")] - 0x1) *
+                0xa;
+            _0x4f9541 +=
+              this[_0x3544("0x9", "G]$I")][_0x3544("0xa", "@9oW")] < 0x1
+                ? 0xa
+                : 0x0;
+            return _0x4f9541 + "px";
+          },
+          numO: function() {
+            var _0xc9e570 = 0x0;
+            for (
+              var _0x581d60 = 0x0;
+              _0x581d60 < this[_0x3544("0xb", "ex1m")][_0x3544("0xc", "Nu@Y")];
+              _0x581d60++
+            ) {
+              if (
+                this[_0x3544("0x9", "G]$I")][_0x3544("0xd", "ewf*")](
+                  _0x581d60
+                ) === "o"
+              ) {
+                _0xc9e570++;
+              }
+            }
+            return _0xc9e570;
+          },
+          b: function() {
+            return (
+              this[_0x3544("0xe", "F@V3")][_0x3544("0xf", "FQW8")]() ===
+              _0x3544("0x10", "Iht2")
+            );
+          },
+          shift: function(_0x48b3bf, _0x229544) {
+            var _0x4cd4fd = this[_0x3544("0x11", "E09L")];
+            if (
+              _0x48b3bf >= _0x4cd4fd[_0x3544("0x12", "s6cR")] - 0x1 &&
+              _0x229544 > 0x0
+            ) {
+              return;
+            }
+            if (_0x48b3bf <= 0x0 && _0x229544 < 0x0) {
+              return;
+            }
+            var _0x56e05e = _0x4cd4fd[_0x3544("0x13", "o[7$")](_0x48b3bf);
+            var _0x59428b = _0x4cd4fd[_0x3544("0x14", "n7##")](
+              _0x48b3bf + _0x229544
+            );
+            var _0x44a1c9 = _0x4cd4fd[_0x3544("0x15", "s6cR")](
+              _0x48b3bf,
+              0x1,
+              _0x59428b
+            )[_0x3544("0x16", "PIaG")](_0x48b3bf + _0x229544, 0x1, _0x56e05e);
+            this[_0x3544("0x17", "uRXG")] = _0x44a1c9;
+          },
+          d: function() {
+            return this[_0x3544("0x18", "7u#U")] === _0x3544("0x19", "Iht2");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
